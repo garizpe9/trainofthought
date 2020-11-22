@@ -1,0 +1,11 @@
+#overlay, .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+
+  .video-circle {
+    border-radius: 50%;
+    object-fit: cover;
+    }
