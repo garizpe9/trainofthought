@@ -1,31 +1,41 @@
-import React, { Component } from 'react';
+import React from 'react'
 import { Link, withRouter} from "react-router-dom"
-import './Navbar.css'
+import '../nav/NavBar.css'
 
-class NavBar extends Component {
-    handleLogout = () => {
-        this.props.clearUser();
-        this.props.history.push('/');
-    }
+class NavBar extends React.Component {
   render(){
 
     return (
-      <header>
-        <h1 className="site-title">Daily Journal<br />
-          <small>React 2.0</small>
-        </h1>
-        <nav>
-          <ul className="container">
-            <li><Link className="nav-link" to="/">Home</Link></li>
-            {(this.props.user) ?
-            <>
-            <li><Link className="nav-link" to="/entries">Journal</Link></li>
-            <li><span className="nav-link" onClick={this.handleLogout}>Logout</span></li>
-            </>
-            : <li><Link className="nav-link" to="/login">Login</Link></li>}
-          </ul>
-        </nav>
-      </header>
+      //<!-- Icon Bar (Sidebar - hidden on small screens) -->
+      <div className="container navbar">
+        <nav className="sidebar bigNav">
+          <button type="button" className="btn btn-link">
+              <i className="fas fa-home"></i>            
+              <p>HOME</p>
+            </button>
+            <button type="button" className="btn btn-link">
+              <i className="fas fa-history"></i>
+              <p>RECENT ENTRIES</p>
+            </button>
+            <button type="button" className="btn btn-link">
+              <i className="fas fa-book"></i>            
+              <p>NOTEBOOKS</p>
+            </button>
+            <button type="button" className="btn btn-link">
+              <i className="far fa-question-circle"></i>            
+              <p>ABOUT</p>
+            </button>
+      </nav>
+  
+      <div class="w3-top smallNav w3-hide-medium" id="myNavbar">
+        <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+          <a href="#" class="w3-bar-item w3-button">HOME</a>
+          <a href="#photos" class="w3-bar-item w3-button">ENTRIES</a>
+          <a href="#contact" class="w3-bar-item w3-button">NOTEBOOKS</a>
+          <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+        </div>
+      </div>
+    </div>
     )
   }
 }
