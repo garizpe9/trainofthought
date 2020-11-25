@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
 body{
     background: url("../Images/railway.png");
     background-size:contain;
@@ -15,6 +17,7 @@ body{
     background-color: white;
     box-shadow: lightcoral;
     box-sizing: content-box;
+    opacity: 95%;
 }
 #mainSect { 
     opacity:1;
@@ -23,8 +26,8 @@ body{
     position:absolute;
     left:0px;
     top:0px;
-    margin-left: 30%;
-    border-top-left-radius:38px;
+    margin-left: 40%;
+    border-top-left-radius:0;
     border-top-right-radius:38px;
     border-bottom-left-radius:38px;
     border-bottom-right-radius:38px;
@@ -32,7 +35,7 @@ body{
 
 }
 #e31_4 { 
-    color:rgba(92.00000211596489, 150.0000062584877, 158.00000578165054, 1);
+    color:#5c969e;
     opacity:1;
     width:150px;
     height:25px;
@@ -67,7 +70,7 @@ body{
     position:absolute;
     left:35px;
     top:76px;
-    font-family:Cera Pro;
+    font-family: 'Satisfy', cursive;
     text-align:left;
     font-size:40px;
     letter-spacing:0;

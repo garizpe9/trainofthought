@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, withRouter} from "react-router-dom"
+import { withRouter } from "react-router-dom"
 import '../jumbotron/Jumbotron.css'
 
 class Jumbotron extends React.Component {
@@ -8,7 +8,7 @@ class Jumbotron extends React.Component {
       <div className="jumbotron jumbotron-fluid">
         <div className="container">
           <h1>Train of Thought</h1>      
-          <p></p>
+          <p>Welcome {}!</p>
         </div>
       </div>
     )

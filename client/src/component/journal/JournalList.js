@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import '../journal/JournalList.css'
 
-class Recent extends React.Component {
+class Recent extends Component {
     render(){
         <>
         <section className="section-content">
