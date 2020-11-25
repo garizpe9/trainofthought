@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.h3 {
+  color: white;
+}
 
 .card {
   /* Add shadows to create the "card" effect */
@@ -9,23 +14,26 @@
   flex: 0 1 24%;
   background-color: #D7D7D9;
   font-family: 'Indie Flower', cursive;
-  color: black;
+  color: white
 }
 
 .card-content {
   padding: .5em;
+  font-family:Cera Pro
+
 }
 
-.card-content h3 {
+.card-content h2 {
   margin-top: 0;
+  font-family:Cera Pro;
   margin-bottom: .5em;
   font-weight: bold;
-  color:black;
+  color: white;
 }
 
 .card-content p {
   font-size: 80%;
-  color: black;
+  color: white;
 }
 
 .content-entryname {
