@@ -6,7 +6,7 @@ import JournalCard from "./component/journal/JournalCard";
 import JournalEntry from "./component/journal/JournalEntry";
 import Jumbotron from "./component/jumbotron/Jumbotron";
 import LandingPage from "./component/LandingPage";
-import NavBar from "./component/nav/NavBar"
+import NavBar from "./component/nav/Navbar"
 
 class App extends Component {
   render() {
