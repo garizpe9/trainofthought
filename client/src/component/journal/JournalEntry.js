@@ -14,40 +14,76 @@ class JournalEntry extends Component {
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlTextarea1">
                     <Form.Label>3 Things I Love About Myself</Form.Label>
-                    <Form.Control type="text" placeholder="1" />
+                    <Form.Control
+                    onChange={() => {}}
+                    type="text"
+                    placeholder="1" />
                     <br />                    
-                    <Form.Control type="text" placeholder="2" />
+                    <Form.Control
+                    onChange={() => {}}
+                    type="text"
+                    placeholder="2" />
                     <br />
-                    <Form.Control type="text" placeholder="3" />
+                    <Form.Control
+                    onChange={() => {}}
+                    type="text"
+                    placeholder="3" />
                     <br />
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlTextarea2">
                     <Form.Label>What Went Well Today?</Form.Label>
-                    <Form.Control type="text" placeholder="1" />
+                    <Form.Control
+                    onChange={() => {}}
+                    type="text"
+                    placeholder="1" />
                     <br />                    
-                    <Form.Control type="text" placeholder="2" />
+                    <Form.Control
+                    onChange={() => {}}
+                    type="text"
+                    placeholder="2" />
                     <br />
-                    <Form.Control type="text" placeholder="3" />
+                    <Form.Control
+                    onChange={() => {}}
+                    type="text"
+                    placeholder="3" />
                     <br />
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlTextarea3">
                     <Form.Label>What Didn't?</Form.Label>
-                    <Form.Control type="text" placeholder="1" />
+                    <Form.Control
+                    onChange={() => {}}
+                    type="text"
+                    placeholder="1" />
                     <br />                    
-                    <Form.Control type="text" placeholder="2" />
+                    <Form.Control
+                    onChange={() => {}}
+                    type="text"
+                    placeholder="2" />
                     <br />
-                    <Form.Control type="text" placeholder="3" />
+                    <Form.Control
+                    onChange={() => {}}
+                    type="text"
+                    placeholder="3" />
                     <br />
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlTextarea4">
                     <Form.Label>Let's Vent!</Form.Label>
-                    <Form.Control as="textarea" rows={5} />
+                    <Form.Control
+                    onChange={() => {}}
+                    as="textarea"
+                    rows={5} />
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlInput1">
                     <Form.Label>To Nurture Myself Today I Will...</Form.Label>
-                    <Form.Control as="textarea" placeholder="Take a bubble bath, get a massage, go for a walk" />
+                    <Form.Control
+                    onChange={() => {}}
+                    as="textarea"
+                    placeholder="Take a bubble bath, get a massage, go for a walk" />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button
+                onClick={() => {}}
+                variant="primary"
+                type="submit">
                     Submit
                 </Button>
                 </Form>

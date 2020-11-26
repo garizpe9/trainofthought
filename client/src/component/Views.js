@@ -1,4 +1,4 @@
-/*import { Route, Redirect } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from 'react'
 import Home from './home/Home'
 import JournalEntry from '../component/journal/JournalEntry'
@@ -36,4 +36,4 @@ class Views extends Component {
     }
 }
 
-export default withRouter(Views);*/
+export default withRouter(Views);
