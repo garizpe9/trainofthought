@@ -27,12 +27,12 @@ class NavBar extends React.Component {
             </button>
       </nav>
   
-      <div class="w3-top smallNav w3-hide-medium" id="myNavbar">
-        <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-          <button href="#" class="w3-bar-item w3-button">HOME</button>
-          <button href="#photos" class="w3-bar-item w3-button">ENTRIES</button>
-          <button href="#contact" class="w3-bar-item w3-button">NOTEBOOKS</button>
-          <button href="#about" class="w3-bar-item w3-button">ABOUT</button>
+      <div className="w3-top smallNav w3-hide-medium" id="myNavbar">
+        <div className="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+          <button href="#" className="w3-bar-item w3-button">HOME</button>
+          <button href="#photos" className="w3-bar-item w3-button">ENTRIES</button>
+          <button href="#contact" className="w3-bar-item w3-button">NOTEBOOKS</button>
+          <button href="#about" className="w3-bar-item w3-button">ABOUT</button>
         </div>
       </div>
     </div>
