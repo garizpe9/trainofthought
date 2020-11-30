@@ -1,19 +1,23 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import HomeLandingPage from "../src/component/pages/LandingPage";
+import HomeLandingPage from "./pages/LandingPage"
 import NavBar from "./component/nav/Navbar"
+import FaceDetectionPage from './pages/FaceDetectionPage/FaceDetectionPage';
 
 function App() {
-  return  (
+  return (
     <Router>
       <div>
-      <NavBar/>
-      <Switch>
-        <Route exact path={["/", "/home"]}>
-          <HomeLandingPage />
-       </Route>
-      </Switch>
+        <NavBar />
+        <Switch>
+          <Route exact path={["/", "/home"]}>
+            <HomeLandingPage />
+          </Route>
+          <Route exact path={"/facerec"}>
+            <FaceDetectionPage />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );
