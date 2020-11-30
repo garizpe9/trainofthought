@@ -46,7 +46,7 @@ app.get("*", function(req, res) {
 });
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/journalentrylist");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/journalentrylist", { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
