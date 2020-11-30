@@ -1,28 +1,23 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-//import logo from "./logo.svg";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import JournalCard from "./component/journal/JournalCard";
-import JournalEntry from "./component/journal/JournalEntry";
-import Jumbotron from "./component/jumbotron/Jumbotron";
-import LandingPage from "./component/LandingPage";
+import HomeLandingPage from "../src/component/pages/LandingPage";
 import NavBar from "./component/nav/Navbar"
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Router>
-        <NavBar/>
-        <Jumbotron/>
-        <LandingPage/>
-        <JournalCard/>
-        <JournalEntry/>
-        </Router>
-       
+function App() {
+  return  (
+    <Router>
+      <div>
+      <NavBar/>
+      <Switch>
+        <Route exact path={["/", "/home"]}>
+          <HomeLandingPage />
+       </Route>
+      </Switch>
       </div>
-    );
-  }
+    </Router>
+  );
 }
+
 
 export default App;

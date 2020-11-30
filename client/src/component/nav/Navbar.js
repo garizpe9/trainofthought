@@ -6,7 +6,6 @@ class NavBar extends React.Component {
   render(){
 
     return (
-      //<!-- Icon Bar (Sidebar - hidden on small screens) -->
       <div className="container navbar">
         <nav className="sidebar bigNav">
           <button type="button" className="btn btn-link">
