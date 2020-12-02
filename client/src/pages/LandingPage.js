@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import "../App.css"
-import JournalCard from "../component/journal/JournalCard";
 import JournalEntry from "../component/journal/JournalEntry";
 import Jumbotron from "../component/jumbotron/Jumbotron";
 import LandingPage from "../component/LandingPage"
@@ -15,7 +14,6 @@ class HomeLandingPage extends Component {
         <NavBar/>
         <Jumbotron/>
         <LandingPage/>
-        <JournalCard/>
         <JournalEntry/>
         </Router>
        

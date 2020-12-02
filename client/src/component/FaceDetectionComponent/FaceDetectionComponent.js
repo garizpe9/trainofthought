@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+/*import React, { useEffect, useRef } from "react";
 import { CameraComponent } from "../CameraComponent/CameraComponent";
 import CanvasComponent from "../CanvasComponent/CanvasComponent";
 import styled from "styled-components";
@@ -6,7 +6,7 @@ import {
     nets, loadFaceExpressionModel, matchDimensions,
     resizeResults, detectSingleFace, TinyFaceDetectorOptions,
     draw
-} from "face-api.js";
+} from "face-api.min.js";
 
 const ContainerComponent = styled.div`
     position: relative;
@@ -56,4 +56,4 @@ const FaceDetectionComponent = () => {
     );
 };
 
-export default FaceDetectionComponent;
+export default FaceDetectionComponent;*/
