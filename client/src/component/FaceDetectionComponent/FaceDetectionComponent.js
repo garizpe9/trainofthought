@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { CameraComponent } from "../CameraComponent/CameraComponent";
 import CanvasComponent from "../CanvasComponent/CanvasComponent";
 import styled from "styled-components";
-import { 
+import {
     nets, loadFaceExpressionModel, matchDimensions,
     resizeResults, detectSingleFace, TinyFaceDetectorOptions,
     draw
@@ -17,7 +17,6 @@ const OverlayComponent = styled.div`
     top: 0;
     left: 0;
 `;
-
 
 const FaceDetectionComponent = () => {
     const videoRef = useRef();
@@ -37,6 +36,20 @@ const FaceDetectionComponent = () => {
             const minConfidence = 0.05;
             draw.drawDetections(canvasRef.current, resizedResult);
             draw.drawFaceExpressions(canvasRef.current, resizedResult, minConfidence);
+
+///// expression capture ////////
+
+            const expressions = result.expressions;
+            const maxValue = Math.max(...Object.values(expressions));
+            const emotion = Object.keys(expressions).filter(
+                item => expressions[item] === maxValue
+            );
+            setTimeout(() => {
+                console.log(emotion[0])
+              }, 5000);
+
+ ///// expression capture ////////
+
         }
         setTimeout(() => startFaceDetection());
     };
