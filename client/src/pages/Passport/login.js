@@ -1,5 +1,6 @@
 import React, {useState}from "react";
 
+
 function Login() {
     const [password, setPassword] = useState({})
 
@@ -15,26 +16,31 @@ function Login() {
         }
     };
     
-        
     return(
-    <div><h1>Login</h1>
-    username
-    <input 
-        onChange={handleInputChange}
-        name="username"
-    />
-    <br/>
-
-    password
-    <input
-        onChange={handleInputChange}
-        name="password"/>
-        <br/>
-        <button
-      disabled={!(password.username && password.password)}
-      onClick={handleFormSubmit}>Submit</button>
-    </div>
+        <div id="login">
+            <div id="mainSect">
+                <div><h1>Login</h1>
+                username
+                <input 
+                    onChange={handleInputChange}
+                    name="username"
+                />
+                <br/>
+                password
+                <input
+                    onChange={handleInputChange}
+                    name="password"/>
+                    <br/>
+                    <button
+                disabled={!(password.username && password.password)}
+                onClick={handleFormSubmit}>Submit</button>
+                </div>
+                )
+            </div>
+         </div>
     )
     
-    }
-    export default Login
+}
+
+
+export default Login

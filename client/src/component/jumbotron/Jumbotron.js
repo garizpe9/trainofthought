@@ -5,10 +5,9 @@ import '../jumbotron/Jumbotron.css'
 class Jumbotron extends React.Component {
   render(){
     return (
-      <div className="jumbotron jumbotron-fluid">
-        <div className="container">
+      <div className="jumbotron">
+        <div>
           <h1>Train of Thought</h1>      
-          <p>Welcome {}!</p>
         </div>
       </div>
     )

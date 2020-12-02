@@ -2,11 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 .jumbotron{
-    padding:1rem 1rem;
-    margin-bottom:1rem;
+    padding: 0px;
+    margin-bottom: 20px;
     background-color: #ffffff;
     border-radius:.3rem;
     opacity: 95%;
+    height: 10rem;
 }
 
 h1 {
@@ -18,7 +19,6 @@ h1 {
     color: #e96a66;
     padding: 0;
     margin-left: 5%;
-
 }
 
 p{
