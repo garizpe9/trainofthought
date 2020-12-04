@@ -1,6 +1,5 @@
 import React from "react";
 import RBCarousel from "react-bootstrap-carousel";
-import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 
 const styles = { height: 400, width: "100%" };
 const icon_glass = <span className="fa fa-glass" />;
