@@ -1,5 +1,5 @@
 import React, {useState}from "react";
-
+import API from "../../utils/API"
 
 function Login() {
     const [password, setPassword] = useState({})
@@ -9,38 +9,49 @@ function Login() {
         setPassword({...password, [name]: value})
     };
 
+    function loadBooks() {
+        API.getEntries()
+          .then(res => 
+            setPassword(res.data)
+          )
+          .catch(err => console.log(err));
+      };
+
+
     function handleFormSubmit(event) {
         event.preventDefault();
         if (password.username && password.password) {
-            console.log("soop")
+          API.saveEntry({
+            header: password.username,
+            entry: password.password,
+            
+          })
+            .then(res => console.log(res))
+            .then(res => loadBooks())
+            
+            .catch(err => console.log(err));
         }
-    };
-    
+      };
+        
     return(
-        <div id="login">
-            <div id="mainSect">
-                <div><h1>Login</h1>
-                username
-                <input 
-                    onChange={handleInputChange}
-                    name="username"
-                />
-                <br/>
-                password
-                <input
-                    onChange={handleInputChange}
-                    name="password"/>
-                    <br/>
-                    <button
-                disabled={!(password.username && password.password)}
-                onClick={handleFormSubmit}>Submit</button>
-                </div>
-                )
-            </div>
-         </div>
+    <div><h1>Login</h1>
+    username
+    <input 
+        onChange={handleInputChange}
+        name="username"
+    />
+    <br/>
+
+    password
+    <input
+        onChange={handleInputChange}
+        name="password"/>
+        <br/>
+        <button
+      disabled={!(password.username && password.password)}
+      onClick={handleFormSubmit}>Submit</button>
+    </div>
     )
     
-}
-
-
-export default Login
+    }
+    export default Login

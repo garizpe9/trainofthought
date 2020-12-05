@@ -7,10 +7,10 @@ router.route("/")
   .post(journalController.create);
 
 // Matches with "/api/entries/:id"
-router
-  .route("/:id")
-  .get(journalController.findById)
-  .put(journalController.update)
-  .delete(journalController.remove);
+// router
+//   .route("/:id")
+//   .get(journalController.findById)
+//   .put(journalController.update)
+//   .delete(journalController.deleteOne);
 
 module.exports = router;
