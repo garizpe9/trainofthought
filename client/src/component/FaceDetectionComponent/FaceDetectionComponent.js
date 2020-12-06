@@ -7,9 +7,13 @@ import {
     nets, loadFaceExpressionModel,
      detectSingleFace, TinyFaceDetectorOptions,
 } from "face-api.js";
+import { authorize } from "passport";
+
 
 const ContainerComponent = styled.div`
     position: relative;
+    height: 100%;
+    margin: 0;
 `;
 
 const OverlayComponent = styled.div`
@@ -17,7 +21,6 @@ const OverlayComponent = styled.div`
     top: 0;
     left: 0;
 `;
-
 
 const FaceDetectionComponent = () => {
     const videoRef = useRef();
@@ -74,7 +77,13 @@ const FaceDetectionComponent = () => {
 
 
     return (
-        <ContainerComponent>
+        <ContainerComponent
+        style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginTop: '5px'
+        }}>
             <CameraComponent videoRef={videoRef} onReady={cameraIsReady} />
             <OverlayComponent>
                 <CanvasComponent canvasRef={canvasRef} />
