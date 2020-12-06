@@ -51,7 +51,7 @@ function ModalComponent() {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <h2 id="transition-modal-title">Looks like you're feeling *insert emotion here*</h2>
+            <h2 id="transition-modal-title">Looks like you're feeling *insert some emotion here*</h2>
             <p id="transition-modal-description">Is that correct?</p>
             <button>Yes</button> <button>No, let me try again</button>
           </div>
