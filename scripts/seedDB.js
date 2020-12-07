@@ -5,22 +5,39 @@ const db = require("../models");
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/journalentrylist");
 
+// const journalSeed = [
+//   {
+//     header: "Hello World",
+//     entry: "admin",
+//     date: new Date(Date.now())
+//   },
+
+// ];
+
 const journalSeed = [
   {
-    header: "Hello World",
-    entry: "admin",
-    date: new Date(Date.now())
+  intention: "hello?",
+  nurture: "hello?",
+  love1: "hello?",
+  love2: "hello?",
+  love3: "hello?",
+  well1: "hello?",
+  well2: "hello?",
+  well3: "hello?",
+  notWell: "hello?",
+  vent: "hello?",
+  date: new Date(Date.now())
   },
 
 ];
 
-const userSeed = [
-  {
-    username: "username",
-    password: "password",
-  },
+// const userSeed = [
+//   {
+//     username: "username",
+//     password: "password",
+//   },
 
-];
+// ];
 
 db.Journal.remove({})
   .then(() => db.Journal.collection.insertMany(journalSeed))
@@ -33,13 +50,13 @@ db.Journal.remove({})
     process.exit(1);
   });
 
-  db.AUser.insertMany(userSeed)
+  // db.AUser.insertMany(userSeed)
   
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
+  // .then(data => {
+  //   console.log(data.result.n + " records inserted!");
+  //   process.exit(0);
+  // })
+  // .catch(err => {
+  //   console.error(err);
+  //   process.exit(1);
+  // });
