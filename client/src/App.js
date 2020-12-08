@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HomeLandingPage from "./pages/LandingPage"
 import FaceDetectionPage from './pages/FaceDetectionPage/FaceDetectionPage';
 import Login from './pages/Passport/login';
-import Home from './pages/Passport/home';
+import LandingPage from './component/LandingPage';
 import Register from './pages/Passport/register';
 import BottomAppBar from '../src/component/nav/BottomAppBar'
+import CreateJournalPage from './pages/CreateJournalPage/CreateJournalPage'
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <div>
         <BottomAppBar/>
         <Switch>
-          <Route exact path={["/", "/home"]}>
+          <Route exact path={["/"]}>
             <HomeLandingPage />
           </Route>
           <Route exact path={"/facerec"}>
@@ -23,10 +24,13 @@ function App() {
             <Login />
           </Route>
           <Route exact path={"/home"}>
-            <Home />
+            <LandingPage />
           </Route>
           <Route exact path={"/register"}>
             <Register />
+          </Route>
+          <Route exact path={"/createjournal"}>
+            <CreateJournalPage />
           </Route>
         </Switch>
       </div>
