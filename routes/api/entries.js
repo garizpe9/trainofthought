@@ -11,6 +11,6 @@ router.route("/")
 //   .route("/:id")
 //   .get(journalController.findById)
 //   .put(journalController.update)
-//   .delete(journalController.deleteOne);
+//   .delete(journalController.remove);
 
 module.exports = router;

@@ -6,6 +6,13 @@ const CAPTURE_OPTIONS = {
     video: { facingMode: "environment" },
 };
 
+const cameraStyle = {
+    borderRadius: "50%",
+    objectFit: "cover",
+    width: "500px",
+    height: "500px"
+};
+
 export const CameraComponent = (props) => {
     const { videoRef, onReady }= props;
     const mediaStream = useUserMedia(CAPTURE_OPTIONS);
@@ -23,6 +30,6 @@ export const CameraComponent = (props) => {
 
 
     return (
-        <video ref={videoRef} onCanPlay={handleCanPlay} autoPlay playsInline muted />
+        <video ref={videoRef} onCanPlay={handleCanPlay} autoPlay playsInline muted style={cameraStyle} />
     );
 };
