@@ -1,17 +1,19 @@
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import { ThemeProvider } from '@material-ui/core/styles'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import theme from '../../src/theme'
-import Item from '../components/item'
+import React, { Component } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import BottomAppBar from './nav/BottomAppBar'
+import JournalList from './journal/JournalList'
 
-const LandingPage = () => (
-  <ThemeProvider theme={theme}>
-  <CssBaseline />
-  <Item />
-    <Grid>
-    </Grid>
-    </ThemeProvider>
-  )
+class LandingPage extends Component {
+  render() {
+    return(
+      <div>
+        <Router>
+        <JournalList/>
+        <BottomAppBar/>
+        </Router>
+      </div>
+    );
+  }
+}
 
-  export default LandingPage
+export default LandingPage;

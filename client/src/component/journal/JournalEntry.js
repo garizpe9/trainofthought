@@ -1,25 +1,33 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Button, CardContent, CardActionArea,
-Card, CardMedia, CssBaseline, Grid, Paper, TextField, ThemeProvider } from '@material-ui/core';
+import { Button, 
+    CardContent, 
+    CardActionArea,
+    Card, 
+    CardMedia, 
+    CssBaseline, 
+    Grid, 
+    Paper, 
+    TextField, 
+    ThemeProvider 
+} from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
-import NOTE_ONE from '../../Images/note_one.jpg';
-import theme from '../../../src/theme';
+import theme from '../../theme';
 
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
     },
-    Typography: {
+    typography: {
         fontFamily: [
           'Shrikhand',
           'cursive',
-        ]
+        ], 
     },
     paper: {
       padding: theme.spacing(2),
       textAlign: 'center',
-      color: theme.palette.text.secondary,
+      color: theme.palette.secondary,
     },
     card: {
         maxWidth: 345,
@@ -34,7 +42,7 @@ export default function JournalEntry() {
     const classes = useStyles();
     return (
         <ThemeProvider theme={theme}>
-            <CssBaseline />
+        <CssBaseline />
             <div className={classes.root}>
                 <Grid container spacing={3}>
                     <Grid item xs={12}>
@@ -52,7 +60,7 @@ export default function JournalEntry() {
                             </CardContent>
                             <Grid item xs={12}>
                                 <Paper className={classes.paper}>
-                                    <Typography gutterBottom variant="h3" component="h2">
+                                    <Typography gutterBottom variant="h3" component="h2" className={classes.typography}>
                                         Today's Journal
                                     </Typography>
                                 </Paper>
@@ -61,27 +69,27 @@ export default function JournalEntry() {
                                 <Grid container>
                                     <Grid item xs={6}>
                                         <Paper className={classes.paper}>
-                                            <Typography gutterBottom variant="h4" component="h2">
+                                            <Typography gutterBottom variant="h4" component="h2" className={classes.typography}>
                                                 My Daily Intention
                                             </Typography>
                                             <TextField
                                                 id="outlined-secondary"
                                                 label="Energy Flows Where Intention Goes"
                                                 variant="outlined"
-                                                color="secondary"
+                                                color="primary"
                                             />
                                         </Paper>
                                     </Grid>
                                     <Grid item xs={6}>
                                         <Paper className={classes.paper} controlId="exampleForm.ControlTextarea1">
-                                            <Typography gutterBottom variant="h4" component="h2">
+                                            <Typography gutterBottom variant="h4" component="h2" className={classes.typography}>
                                                 To Nurture Myself
                                             </Typography>
                                             <TextField
                                                 id="outlined-secondary"
                                                 label="Today I Will..."
                                                 variant="outlined"
-                                                color="secondary"
+                                                color="primary"
                                             />
                                         </Paper>
                                     </Grid>
@@ -91,56 +99,56 @@ export default function JournalEntry() {
                                 <Grid container>
                                     <Grid item xs={6}>
                                         <Paper className={classes.paper} controlId="exampleForm.ControlTextarea1">
-                                            <Typography gutterBottom variant="h5" component="h2">
+                                            <Typography gutterBottom variant="h5" component="h2" className={classes.typography}>
                                                 3 Things I Love About Myself
                                             </Typography>
                                             <TextField
                                                 id="outlined-secondary"
                                                 label="1"
                                                 variant="outlined"
-                                                color="secondary"
+                                                color="primary"
                                             />
                                             <br />                    
                                             <TextField
                                                 id="outlined-secondary"
                                                 label="2"
                                                 variant="outlined"
-                                                color="secondary"
+                                                color="primary"
                                             />
                                             <br />
                                             <TextField
                                                 id="outlined-secondary"
                                                 label="3"
                                                 variant="outlined"
-                                                color="secondary"
+                                                color="primary"
                                             />
                                             <br />
                                         </Paper>
                                     </Grid>
                                     <Grid item xs={6}>
                                         <Paper className={classes.paper} controlId="exampleForm.ControlTextarea1">
-                                            <Typography gutterBottom variant="h5" component="h2">
+                                            <Typography gutterBottom variant="h5" component="h2" className={classes.typography}>
                                                 What Went Well Today?
                                             </Typography>
                                             <TextField
                                                 id="outlined-secondary"
                                                 label="1"
                                                 variant="outlined"
-                                                color="secondary"
+                                                color="primary"
                                             />
                                             <br />                    
                                             <TextField
                                                 id="outlined-secondary"
                                                 label="2"
                                                 variant="outlined"
-                                                color="secondary"
+                                                color="primary"
                                             />
                                             <br />
                                             <TextField
                                                 id="outlined-secondary"
                                                 label="3"
                                                 variant="outlined"
-                                                color="secondary"
+                                                color="primary"
                                             />
                                             <br />
                                         </Paper>
@@ -150,28 +158,28 @@ export default function JournalEntry() {
                                     <Grid container>
                                         <Grid item xs={6}>
                                             <Paper className={classes.paper} controlId="exampleForm.ControlTextarea1">
-                                                <Typography gutterBottom variant="h5" component="h2">
+                                                <Typography gutterBottom variant="h5" component="h2" className={classes.typography}>
                                                     What Didn't and How Can We Adjust?
                                                 </Typography>
                                                 <TextField
                                                     id="outlined-secondary"
                                                     label="Let Me Tell You"
                                                     variant="outlined"
-                                                    color="secondary"
+                                                    color="primary"
                                                 />
                                                 <br />                    
                                             </Paper>
                                         </Grid>
                                         <Grid item xs={6}>
                                             <Paper className={classes.paper} controlId="exampleForm.ControlTextarea1">
-                                                <Typography gutterBottom variant="h5" component="h2">
+                                                <Typography gutterBottom variant="h5" component="h2" className={classes.typography}>
                                                     Let's Vent!
                                                 </Typography>
                                                 <TextField 
                                                     id="outlined-secondary"
                                                     label="Here's the tea"
                                                     variant="outlined"
-                                                    color="secondary"
+                                                    color="primary"
                                                 />
                                             </Paper>
                                         </Grid>
@@ -197,5 +205,3 @@ export default function JournalEntry() {
         </ThemeProvider>
     )
 }
-
-

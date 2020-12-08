@@ -1,4 +1,6 @@
 import { createMuiTheme } from '@material-ui/core/styles'
+import pink from '@material-ui/core/colors/pink';
+import grey from '@material-ui/core/colors/grey';
 
 const theme = createMuiTheme({
     typography: {
@@ -7,7 +9,9 @@ const theme = createMuiTheme({
           'cursive',
         ]},
   palette: {
-    primary: { 500: '#467fcf' },
+    primary: { main: pink[500] },
+    secondary: { main: grey[700] },
+    type: 'light',
   },
 })
 

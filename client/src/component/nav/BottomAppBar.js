@@ -16,7 +16,8 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import theme from '../../theme';
-import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
+
 
 const useStyles = makeStyles((theme) => ({
     text: {
@@ -35,6 +36,12 @@ const useStyles = makeStyles((theme) => ({
         display: 'none',
         [theme.breakpoints.up('sm')]: {
             display: 'block',
+        },
+        typography: {
+            fontFamily: [
+              'Shrikhand',
+              'cursive',
+            ]
         },
         flexGrow: 1,
         alignSelf: 'flex-end',
@@ -91,60 +98,62 @@ export default function BottomAppBar() {
     );
     return (
     <React.Fragment>
-        <CssBaseline />
-        <AppBar position="fixed" color="secondary" className={classes.appBar}>
-        <Toolbar>
-            <IconButton edge="start" color="inherit" aria-label="open drawer">
-                <MenuIcon />
-            </IconButton>
-            <IconButton color="inherit">
-                <div className={classes.searchIcon}></div>
-                    <SearchIcon />
-                    <InputBase
-                        placeholder="Search…"
-                        classes={{
-                            root: classes.inputRoot,
-                            input: classes.inputInput,
-                        }}
-                        inputProps={{ 'aria-label': 'search' }}
-                    />
-            </IconButton>
-            <div className={classes.grow} />
-            <ThemeProvider theme={theme}>
-                <Typography className={classes.title} variant="h3">
-                Train of Thought
-            </Typography>
-            </ThemeProvider>
-            <IconButton aria-label="show 4 new mails" color="inherit">
-                <Badge badgeContent={4} color="secondary">
-                <MailIcon />
-                </Badge>
-            </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-                <Badge badgeContent={17} color="secondary">
-                <NotificationsIcon />
-                </Badge>
-            </IconButton>
-            <IconButton
-                edge="end"
-                aria-label="account of current user"
-                aria-haspopup="true"
-                aria-controls={menuId}
-                color="inherit"
-                onClick={handleProfileMenuOpen}
-            >
-            <AccountCircle />
-            </IconButton>
-            <IconButton
-                aria-label="show more"
-                aria-haspopup="true"
-                color="inherit"
-            >
-            <MoreIcon />
-            </IconButton>
-        </Toolbar>
-        </AppBar>
-        {renderMenu}
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <AppBar position="fixed" color="primary" className={classes.appBar}>
+            <Toolbar>
+                <IconButton edge="start" color="inherit" aria-label="open drawer">
+                    <MenuIcon />
+                </IconButton>
+                <IconButton color="inherit">
+                    <div className={classes.searchIcon}></div>
+                        <SearchIcon />
+                        <InputBase
+                            placeholder="Search…"
+                            classes={{
+                                root: classes.inputRoot,
+                                input: classes.inputInput,
+                            }}
+                            inputProps={{ 'aria-label': 'search' }}
+                        />
+                </IconButton>
+                <div className={classes.grow} />
+                <ThemeProvider theme={theme}>
+                    <Typography className={classes.title} variant="h3">
+                    Train of Thought
+                </Typography>
+                </ThemeProvider>
+                <IconButton aria-label="show 4 new mails" color="inherit">
+                    <Badge badgeContent={4} color="secondary">
+                    <MailIcon />
+                    </Badge>
+                </IconButton>
+                <IconButton aria-label="show 17 new notifications" color="inherit">
+                    <Badge badgeContent={17} color="secondary">
+                    <NotificationsIcon />
+                    </Badge>
+                </IconButton>
+                <IconButton
+                    edge="end"
+                    aria-label="account of current user"
+                    aria-haspopup="true"
+                    aria-controls={menuId}
+                    color="inherit"
+                    onClick={handleProfileMenuOpen}
+                >
+                <AccountCircle />
+                </IconButton>
+                <IconButton
+                    aria-label="show more"
+                    aria-haspopup="true"
+                    color="inherit"
+                >
+                <MoreIcon />
+                </IconButton>
+            </Toolbar>
+            </AppBar>
+            {renderMenu}
+        </ThemeProvider>
     </React.Fragment>
     );
 }
