@@ -8,8 +8,8 @@ class LandingPage extends Component {
     return(
       <div>
         <Router>
-        <JournalList/>
-        <BottomAppBar/>
+          <JournalList/>
+          <BottomAppBar/>
         </Router>
       </div>
     );
