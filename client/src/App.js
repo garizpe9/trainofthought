@@ -5,8 +5,10 @@ import FaceDetectionPage from './pages/FaceDetectionPage/FaceDetectionPage';
 import Login from './pages/Passport/login';
 import LandingPage from './component/LandingPage';
 import Register from './pages/Passport/register';
-import BottomAppBar from '../src/component/nav/BottomAppBar'
-import CreateJournalPage from './pages/CreateJournalPage/CreateJournalPage'
+import BottomAppBar from '../src/component/nav/BottomAppBar';
+import CreateJournalPage from './pages/CreateJournalPage/CreateJournalPage';
+import JournalEntries from './component/journal/JournalEntry'
+import Home from './pages/Passport/home';
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
         <BottomAppBar/>
         <Switch>
           <Route exact path={["/"]}>
-            <HomeLandingPage />
+            <Home />
           </Route>
           <Route exact path={"/facerec"}>
             <FaceDetectionPage />
@@ -24,10 +26,13 @@ function App() {
             <Login />
           </Route>
           <Route exact path={"/home"}>
-            <LandingPage />
+            <HomeLandingPage />
           </Route>
           <Route exact path={"/register"}>
             <Register />
+          </Route>
+          <Route exact path={"/journalentries"}>
+            <JournalEntries />
           </Route>
           <Route exact path={"/createjournal"}>
             <CreateJournalPage />
