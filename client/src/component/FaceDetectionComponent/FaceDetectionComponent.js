@@ -7,6 +7,7 @@ import {
     nets, loadFaceExpressionModel,
      detectSingleFace, TinyFaceDetectorOptions,
 } from "face-api.js";
+import ModalComponent from "../ModalComponent/ModalComponent"
 import { authorize } from "passport";
 
 
@@ -26,6 +27,7 @@ const FaceDetectionComponent = () => {
     const videoRef = useRef();
     const canvasRef = useRef();
     const [cameraReady, setCameraReady] = useState(false);
+    const [emotion, setEmotion] = useState()
 
     const cameraIsReady = () => {
         setCameraReady(true);
@@ -37,7 +39,8 @@ const FaceDetectionComponent = () => {
     }
 
     const redirectToPage = (emotion) => {
-        console.log(emotion);
+        console.log(emotion)
+        setEmotion(emotion)
         // TODO: Redirect Emotion
     }
 
@@ -88,6 +91,7 @@ const FaceDetectionComponent = () => {
             <OverlayComponent>
                 <CanvasComponent canvasRef={canvasRef} />
             </OverlayComponent>
+            <ModalComponent emotion={emotion}/>
         </ContainerComponent>
     );
 };

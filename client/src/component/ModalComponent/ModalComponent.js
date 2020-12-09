@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -18,9 +18,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function ModalComponent() {
+const  ModalComponent = ( {emotion} ) => {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -29,6 +29,8 @@ function ModalComponent() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const reload = () => window.location.reload();
 
   useEffect(() => {
     const timer = setTimeout(() => handleOpen(), 5000);
@@ -51,9 +53,9 @@ function ModalComponent() {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <h2 id="transition-modal-title">Looks like you're feeling *insert some emotion here*</h2>
+            <h2 id="transition-modal-title">It looks like you're feeling {emotion}</h2>
             <p id="transition-modal-description">Is that correct?</p>
-            <button>Yes</button> <button>No, let me try again</button>
+            <button>Yes</button> <button onClick={() => reload()}>No, let me try again</button>
           </div>
         </Fade>
       </Modal>
