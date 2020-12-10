@@ -3,13 +3,14 @@ import pink from '@material-ui/core/colors/pink';
 import grey from '@material-ui/core/colors/grey';
 
 const theme = createMuiTheme({
-    typography: {
-        fontFamily: [
-          'Shrikhand',
-          'cursive',
-        ]},
+  typography: {
+    fontFamily: [
+      'Shrikhand',
+      'cursive',
+    ]
+  },
   palette: {
-    primary: { main: pink[500] },
+    primary: { main: pink[300] },
     secondary: { main: grey[700] },
     type: 'light',
   },
