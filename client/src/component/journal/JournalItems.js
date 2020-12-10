@@ -8,8 +8,6 @@ import {
     Card, 
     CardMedia, 
     CssBaseline, 
-    Grid, 
-    Paper, 
     ThemeProvider,
     Typography,
 } from '@material-ui/core';
