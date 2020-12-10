@@ -40,6 +40,8 @@ const  ModalComponent = ( {emotion} ) => {
   return (
     <div>
       <Modal
+        disableBackdropClick
+        disableEscapeKeyDown
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         className={classes.modal}
@@ -55,7 +57,7 @@ const  ModalComponent = ( {emotion} ) => {
           <div className={classes.paper}>
             <h2 id="transition-modal-title">It looks like you're feeling {emotion}</h2>
             <p id="transition-modal-description">Is that correct?</p>
-            <button>Yes</button> <button onClick={() => reload()}>No, let me try again</button>
+            <button>Yes, let's talk about it</button> <button onClick={() => reload()}>No, let me try again</button>
           </div>
         </Fade>
       </Modal>

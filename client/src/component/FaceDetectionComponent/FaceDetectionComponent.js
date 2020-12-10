@@ -78,7 +78,6 @@ const FaceDetectionComponent = () => {
         initModels();
     }, []);
 
-
     return (
         <ContainerComponent
         style={{
